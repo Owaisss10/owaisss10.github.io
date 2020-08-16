@@ -10051,7 +10051,7 @@ p.lead {
     position: fixed;
     top: 0;
     left: 0;
-    display: flex;
+    display: none;
     flex-direction: column;
     width: 17rem;
     height: 100vh;
