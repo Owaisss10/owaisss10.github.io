@@ -22,10 +22,10 @@
         {
             "company_name": "Univeristy of Eastern Finland",
             "company_description": "University of Eastern Finland, School of Computing has main research areas: Artificial Intelligence and Data Science. UEF also works on research products, algorthims, and location based services.",
-            "designation": "Research Assitant",
-            "duration": "October 2019 - Present",
-            "location": "Joensuu, Finland",
-            "achievements": [
+            "company_designation": "Research Assitant",
+            "company_duration": "October 2019 - Present",
+            "company_location": "Joensuu, Finland",
+            "company_achievements": [
                 "Maps with Apple MapKit and Google Maps SDKs",
                 "Google Directions and OSRM Directions and Routing",
                 "Travelling Salesman Problem in Mobile Application Development Field",
@@ -35,10 +35,10 @@
         {
             "company_name": "DIGITAL PRODIGY LIMITED (DPL)",
             "company_description": "For over 12 years DPL has been at forefront of delivering cutting edge IT services. DPL makes full stack mobile apps and engaging UI designs.",
-            "designation": "iOS Application Developer",
-            "duration": "March 2019 - August 2019",
-            "location": "Islamabad, Pakistan",
-            "achievements": [
+            "company_designation": "iOS Application Developer",
+            "company_duration": "March 2019 - August 2019",
+            "company_location": "Islamabad, Pakistan",
+            "company_achievements": [
                 "Test Driven Development - Unit Testing",
                 "Automated Deployment of Apps - FastLane",
                 "Hybrid App Development (React Native & Vue.js)",
@@ -48,10 +48,10 @@
         {
             "company_name": "Apollo Telecom (Pvt) Ltd.",
             "company_description": "Apollo remains focused on providing superior quality solution. Apollo is also a leading networks solution provider in Pakistan.",
-            "designation": "iOS Application Developer",
-            "duration": "February 2018 - February 2019",
-            "location": "Islamabad, Pakistan",
-            "achievements": [
+            "company_designation": "iOS Application Developer",
+            "company_duration": "February 2018 - February 2019",
+            "company_location": "Islamabad, Pakistan",
+            "company_achievements": [
                 "Refined innovative user interface solutions",
                 "Managed approval process for App Store",
                 "Push Notifications - PUSHER",
@@ -61,10 +61,10 @@
         {
             "company_name": "Reactive Space",
             "company_description": "Reactive Space company specialise in Cryptocurrency, FinTech and Blockchain software development service.",
-            "designation": "iOS Application Developer",
-            "duration": "October 2017 - January 2018",
-            "location": "Rawalpindi, Pakistan",
-            "achievements": [
+            "company_designation": "iOS Application Developer",
+            "company_duration": "October 2017 - January 2018",
+            "company_location": "Rawalpindi, Pakistan",
+            "company_achievements": [
                 "Push Notifications with Firebase Server",
                 "Developed iPhone app codebases",
                 "Ensured that all business & design objectives were met",
@@ -81,8 +81,8 @@
             "thesis_title": "Split k-means Clustering & Distance Estimation",
             "thesis_description": "...",
             "cgpa": "4.0/5.0",
-            "duration": "September 2019 - Present",
-            "location": "Joensuu, Finland"
+            "university_duration": "September 2019 - Present",
+            "university_location": "Joensuu, Finland"
         },
         {
             "university_name": "Univeristy of Arid Agriculture",
@@ -91,8 +91,8 @@
             "thesis_title": "Fake Calculator - Data Vault (iOS)",
             "thesis_description": "...",
             "cgpa": "3.26/4.00",
-            "duration": "September 2013 - August 2017",
-            "location": "Rawalpindi, Pakistan"
+            "university_duration": "September 2013 - August 2017",
+            "university_location": "Rawalpindi, Pakistan"
         }
     ],
 
@@ -128,12 +128,12 @@
 
     "projects": [
         {
-            "company_name": "Univeristy of Eastern Finland",
+            "project_company_name": "Univeristy of Eastern Finland",
             "project_name": "MOPSI Marker Clustering API(Client/Server)",
             "project_link": "https://cs.uef.fi/mopsi_dev/clustering_dev/PROJECTS/BootStrapClusteringIntro/index.html",
-            "duration": "October 2019 - April 2020",
-            "location": "Joensuu, Finland",
-            "achievements": [
+            "project_duration": "October 2019 - April 2020",
+            "project_location": "Joensuu, Finland",
+            "project_achievements": [
                 "Using Grid-based algorthim for displaying geo-referenced data in web mapping systems.",
                 "Supports clustering for dataset from 1,000 to 1,000,000 images in 3-5 seconds.",
                 "Code Refactoring and API Documentation in BootStrap.",
@@ -142,24 +142,24 @@
             ]
         },
         {
-            "company_name": "DIGITAL PRODIGY LIMITED (DPL)",
+            "project_company_name": "DIGITAL PRODIGY LIMITED (DPL)",
             "project_name": "Bounce iOS Apps - Sweden & Denmark",
             "project_link": "https://apps.apple.com/us/app/bounce-sweden/id1277804163",
-            "duration": "March 2019 - August 2019",
-            "location": "Islamabad, Pakistan",
-            "achievements": [
+            "project_duration": "March 2019 - August 2019",
+            "project_location": "Islamabad, Pakistan",
+            "project_achievements": [
                 "Designed for customers for online bookings using Adyen Payment Services.",
                 "Maintained the app, bug fixing and new updates.",
                 "Adyen Payment Integration & Notifications Broadcasting using PUSHER"
             ]
         },
         {
-            "company_name": "Apollo Telecom (Pvt) Ltd.",
+            "project_company_name": "Apollo Telecom (Pvt) Ltd.",
             "project_name": "WorkAround iOS App",
             "project_link": "https://www.behance.net/gallery/85403009/WorkAround",
-            "duration": "February 2018 - February 2019",
-            "location": "Islamabad, Pakistan",
-            "achievements": [
+            "project_duration": "February 2018 - February 2019",
+            "project_location": "Islamabad, Pakistan",
+            "project_achievements": [
                 "Location Based Mobile Application.",
                 "Workspace Sign Up, Start/End Shift, Leave Management, Activity Timeline, and Device Details.",
                 "Supervisor Access, Geofencing, offline location pinging, and heat map of user location.",
@@ -167,12 +167,12 @@
             ]
         },
         {
-            "company_name": "Reactive Space",
+            "project_company_name": "Reactive Space",
             "project_name": "LittleBird iOS App",
             "project_link": "https://appadvice.com/app/little-bird-app/1358231243",
-            "duration": "October 2017 - January 2018",
-            "location": "Rawalpindi, Pakistan",
-            "achievements": [
+            "project_duration": "October 2017 - January 2018",
+            "project_location": "Rawalpindi, Pakistan",
+            "project_achievements": [
                 "A chatting application with firebase as backend service.",
                 "Single(One-to-One) chatting.",
                 "Group(One-to-Many) chatting.",
@@ -180,12 +180,12 @@
             ]
         },
         {
-            "company_name": "Univeristy of Arid Agriculture",
+            "project_company_name": "Univeristy of Arid Agriculture",
             "project_name": "Fake Calculator - Data Vault iOS App",
             "project_link": "https://www.behance.net/gallery/55751697/Fake-Calculator-(Secret-Data-Vault)",
-            "duration": "February 2017 - August 2017",
-            "location": "Rawalpindi, Pakistan",
-            "achievements": [
+            "project_duration": "February 2017 - August 2017",
+            "project_location": "Rawalpindi, Pakistan",
+            "project_achievements": [
                 "A secret vault for saving images, notes, contacts and passwords.",
                 "AES 128-bit Encryption.",
                 "Multiple themes support."
