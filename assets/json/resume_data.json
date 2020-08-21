@@ -1,0 +1,27 @@
+{
+    "full_name": "Awais Akram",
+    "phone": "+358 46 587 1622",
+    "mail": "owaisakram103@gmail.com",
+
+    "bio": "MY BIO",
+    "fun": "FUN STATEMENT",
+
+    "github": "https://github.com/owaisss10/",
+    "twitter": "https://twitter.com/owaisss10/",
+    "linkedin": "http://linkedin.com/in/owaisss10/",
+
+    "about_me": {
+        "para1": "This is Paragraph 1",
+        "para2": "This is Paragraph 2"
+    },
+
+    "work_experience": {
+        "tfi": {
+            "heading": "some heading",
+            "description": "some description"
+        },
+        "pisb": {
+            "heading": "some heading",
+        }  
+    }
+}
