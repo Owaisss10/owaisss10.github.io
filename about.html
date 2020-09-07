@@ -472,30 +472,9 @@
                         document.getElementById('interactive');
                         document.getElementById('loading').style.display="none"; // hiding spinner
                         document.getElementById('sideNav').style.display="flex"; // displaying side nav
-                        loadDataFromJSONFile();
                     }
                 }, 1500);
             }
-
-            function loadDataFromJSONFile() {
-                let github_link = "https://owaisss10.github.io/assets/json/resume_data.json";
-                $.getJSON(github_link, function(data) {
-
-                  //data is the JSON string
-                  console.log(data);
-
-                  data.work_experience.forEach((work_experience) => {
-                    // Log each movie's title
-                    console.log(work_experience.company_name)
-                  })
-
-
-                // console.log(data["bio"]); // accessing bio
-                // console.log(data.work_experience[0].company_name); // accessing company name
-
-                });
-            }
-
         </script>
     </body>
 </html>
