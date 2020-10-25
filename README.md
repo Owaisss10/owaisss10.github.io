@@ -1,4 +1,7 @@
-# Resume - Awais Akram #### Developed using BootStrap, jQuery and Javascript. 
+# Resume - Awais Akram 
+
+#### Developed using BootStrap, jQuery and Javascript. 
+
 Welcome to my resume website. I created this website to improve my Front-End designing skills. 
 
 <br> 
