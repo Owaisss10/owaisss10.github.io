@@ -501,9 +501,6 @@
             getCurrentLocation();
           }
 
-          // google.maps.event.addListener(map, 'zoom_changed', function() {
-          //     infowindow.close();
-          // });
         });
 
         /* Displaying Spinner on Page Load for 3 seconds */
@@ -579,7 +576,7 @@
           markers.push(marker);
           map.setZoom(12);
 
-          infowindow = new google.maps.InfoWindow({
+          myInfoWindow = new google.maps.InfoWindow({
             content: "<div>" +
                       "<img width=300px height=300px src='assets/img/owi_circle.png'>" +
                       "</div>" +
@@ -590,9 +587,9 @@
                         "</div>"
           });
           google.maps.event.addListener(marker, "click", function() {
-            infowindow.open(map, marker);
+            myInfoWindow.open(map, marker);
           });
-          infowindow.open(map, marker);
+          myInfoWindow.open(map, marker);
         }
 
         function dropViewerMarker(loc) {
