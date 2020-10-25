@@ -12,7 +12,7 @@ I made some design changes and added some extra features:
 
 <br> 
 
-This webiste is hosted on GitHub Pages: <a href="https://www.owaisss10.github.io/about.html" target="_top">Awais Akram - iOS & Web App Developer</a> 
+This webiste is hosted on GitHub Pages: <a href="https://owaisss10.github.io/about.html" target="_top">Awais Akram - iOS & Web App Developer</a> 
 
 *** 
 
