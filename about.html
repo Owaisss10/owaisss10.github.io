@@ -473,12 +473,17 @@
         /* Variables */
         var map;
         var markers = [];
-        // Islamabad 33.690390, 73.000262
-        // Joensuu 62.589588, 29.788128
-        let myLocation = {
-            lat: 33.690390,
-            lng: 73.000262
+
+        var isHomeCountry = false;
+        var contactNumber = "+358 46 587 1622";
+        var address = "Joensuu, Finland";
+        // Suvikatu coordiantes
+        var myLocation = {
+            lat: 62.589588,
+            lng: 29.788128
         };
+
+
 
         var isMobile = false; //initiate as false
 
@@ -490,7 +495,29 @@
 
         /* Document Ready Function */
         jQuery(document).ready(function($) {
-          // Code using $ as usual goes here.
+
+          // if true means Pakistan
+          isHomeCountry = true;
+
+          if (isHomeCountry) {
+            contactNumber = "+92 331 835 8835";
+            address = "Islamabad, Pakistan";
+            // F-10/2 coordinates
+            myLocation = {
+                lat: 33.690390,
+                lng: 73.000262
+            };
+          }
+          else {
+            contactNumber = "+358 46 587 1622";
+            address = "Joensuu, Finland";
+            // Suvikatu coordiantes
+            myLocation = {
+                lat: 62.589588,
+                lng: 29.788128
+            };
+          }
+
           if (isMobile) {
             $("#map").fadeOut();
             $("#mapNavLink").fadeOut();
@@ -503,17 +530,19 @@
 
         });
 
+
+
         /* Displaying Spinner on Page Load for 3 seconds */
-            document.onreadystatechange = function () {
-              var state = document.readyState
-              setTimeout(function () {
-                    if (state == 'complete') {
-                        document.getElementById('interactive');
-                        document.getElementById('loading').style.display="none"; // hiding spinner
-                        document.getElementById('sideNav').style.display="flex"; // displaying side nav
-                    }
-                }, 1500);
-            }
+        document.onreadystatechange = function () {
+          var state = document.readyState
+          setTimeout(function () {
+                if (state == 'complete') {
+                    document.getElementById('interactive');
+                    document.getElementById('loading').style.display="none"; // hiding spinner
+                    document.getElementById('sideNav').style.display="flex"; // displaying side nav
+                }
+            }, 1500);
+        }
 
         /* Functions */
         function initMap() {
@@ -576,14 +605,15 @@
           markers.push(marker);
           map.setZoom(12);
 
+          // Contact Details Info Window
           myInfoWindow = new google.maps.InfoWindow({
             content: "<div>" +
                       "<img width=300px height=300px src='assets/img/owi_circle.png'>" +
                       "</div>" +
                       "<div style='text-align: center; margin-top: 10px;'>" +
                         "<h4> Awais Akram </h4>" +
-                        "<h5> +358 46 587 1622 </h5>" +
-                        "<h6> Joensuu, Finland </h6>" +
+                        "<h5> " + contactNumber + " </h5>" +
+                        "<h6> " + address + " </h6>" +
                         "</div>"
           });
           google.maps.event.addListener(marker, "click", function() {
