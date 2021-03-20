@@ -8,36 +8,78 @@
       <meta name="image" content="https://avatars2.githubusercontent.com/u/28906473?s=460&u=1db78c3208fcbb7454e4366c339cf29ea57f13a8&v=4" />
       <title>Awais Akram - iOS & Web App Developer</title>
       <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
-        <!-- Font Awesome icons (free version)-->
-        <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
-        <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" /> 
-        <!-- Custom Styles CSS -->
-        <style>
-          .hrCustom {
-            display: block;
-            margin-top: 0.5em;
-            margin-bottom: 0.5em;
-            margin-left: auto;
-            margin-right: auto;
-            border-style: inset;
-            border-width: 1px;
-            width: 90%;
-          }
-        </style>
+
+
+
+
+      <!-- Font Awesome icons (free version)-->
+      <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+      <!-- Google fonts-->
+      <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
+      <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+      <!-- Core theme CSS (includes Bootstrap)-->
+      <link href="css/styles.css" rel="stylesheet" />
+      <link href="index.css" rel="stylesheet"/>
+      <!-- Custom Styles CSS -->
+      <style>
+        .hrCustom {
+          display: block;
+          margin-top: 0.5em;
+          margin-bottom: 0.5em;
+          margin-left: auto;
+          margin-right: auto;
+          border-style: inset;
+          border-width: 1px;
+          width: 90%;
+        }
+      </style>
     </head>
     <body id="page-top">
         <!-- Loading Spinner-->
         <div id="loading"></div>
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+
+          <div class="d-flex flex-md-row flex-column justify-content-between text-center">
+
+              <div class="select-dropdown">
+              	<select id="selectTheme" onchange="changeTheme()">
+                  <option selected value="default">Select Theme</option>
+              		<option value="fresca">Fresca (Light)</option>
+                  <option value="darkster">Darkster (Dark)</option>
+              		<option value="greyson">Greyson</option>
+              		<option value="signal">Signal</option>
+                  <option value="hootstrap">Hootstrap</option>
+
+                  <option value="herbie">Herbie</option>
+                  <option value="boldstrap">Boldstrap</option>
+                  <option value="lovey">Lovey</option>
+                  <option value="bootstrapPurple">Boostrap Purple</option>
+                  <option value="poypull">Poypull</option>
+                  <option value="monotony">Monotony</option>
+                  <option value="tequila">Tequila</option>
+              	</select>
+              </div>
+
+
+                <!-- Light/Dark Mode Switch -->
+                <!-- <div class="custom-control custom-switch">
+                  <input type="checkbox" class="custom-control-input" id="darkSwitch">
+                  <label class="custom-control-label whiteLabel" for="darkSwitch">Dark Mode</label>
+                </div>
+                <script src="dark-mode-switch.min.js"></script> -->
+                <!-- ===================== -->
+
+          </div>
+
+
+
+
             <a class="navbar-brand js-scroll-trigger" href="#page-top"
                 ><span class="d-block d-lg-none">Awais Akram</span><span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/profile_pic.jpg" alt="" /></span></a
             ><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experience</a></li>
@@ -49,10 +91,11 @@
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#resume">View Resume</a></li>
                     <br>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#map" id="mapNavLink">Find on Map</a></li>
-
                 </ul>
             </div>
+
         </nav>
+
         <!-- Page Content-->
         <div class="container-fluid p-0">
             <!-- About-->
@@ -485,6 +528,13 @@
         <!-- Bootstrap core JS-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+        <!-- Light theme CSS (includes Bootstrap)-->
+        <link href="light-theme-style.css" rel="stylesheet" id="ref-css" />
+        <!-- Dark theme CSS (includes Bootstrap)-->
+        <!-- <link href="dark-theme-style.css" rel="stylesheet" id="ref-css" /> -->
+
+        <link href="index.css" rel="stylesheet"/>
+
         <!-- Third party plugin JS-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
         <!-- Core theme JS-->
@@ -515,10 +565,37 @@
             isMobile = true;
         }
 
+
+
+        function changeTheme() {
+          var selectTheme = document.getElementById("selectTheme");
+          var selectedTheme = selectTheme.value;
+          console.log(selectedTheme);
+          // choosing the selected theme
+          $("#ref-css").attr("href", "./themes/" + selectedTheme + ".css");
+        }
+
+
         /* Document Ready Function */
         jQuery(document).ready(function($) {
 
-          console.log("Last Updated: 25.12.2020");
+          // default theme on website start
+          changeTheme();
+
+          // $(document).on('change', '#darkSwitch', function (e) {
+          //     let state = $(this).is(':checked');
+          //     console.log(state);
+          //     $(this).attr("checked", state);
+          //     $(this).trigger("click");
+          //     if (state) {
+          //       $("#ref-css").attr("href", "dark-theme-style.css");
+          //     } else {
+          //       $("#ref-css").attr("href", "light-theme-style.css");
+          //     }
+          // });
+
+
+          console.log("Last Updated: 20.03.2021");
 
           // if true means Pakistan
           isHomeCountry = false;
@@ -575,8 +652,6 @@
             zoom: 6,
           });
         }
-
-
 
         function getCurrentLocation() {
           if (navigator.geolocation) {
