@@ -7,25 +7,63 @@
 
 /* Document Ready Function */
 jQuery(document).ready(function($) {
-  console.log("User Profile Page - Last Updated: 21.03.2021");
+  console.log("User Profile Page - Last Updated: 22.03.2021");
+  // load theme from localStorage
+  loadTheme();
+
+  $(document).on('change', '#darkThemeSwitch', function(e) {
+    let state = $(this).is(':checked');
+    console.log(state);
+    $(this).attr("checked", state);
+    $(this).trigger("click");
+    if (state) {
+      $("#ref-css").attr("href", "../../../dark-theme-style.css");
+      $("#navBar").css("background-color", "#EC612D"); // nav bar orange color
+      // saving theme path in localStorage
+      localStorage.setItem("themePath", "../../../dark-theme-style.css");
+    } else {
+      $("#ref-css").attr("href", "../../../light-theme-style.css");
+      $("#navBar").css("background-color", "#EAECEF"); // nav bar grey color
+      // saving theme path in localStorage
+      localStorage.setItem("themePath", "../../../light-theme-style.css");
+    }
+  });
 
   // fetching saved userName in localStorage
   let savedUserName = localStorage.getItem("userName");
   console.log(savedUserName);
 
   if (savedUserName == null || savedUserName == "") {
-    // no username found go back to home screen
-    window.location.href = "../home/index.html";
+    // no username found go back to searchUser screen
+    window.location.href = "../searchUser/index.html";
   } else {
     // fetch user data from api
     getUserDataFromAPI(savedUserName);
-    // fetch user repos from api
-    getUserReposFromAPI(savedUserName);
   }
 
 });
 
 /* Functions */
+
+function loadTheme() {
+  // fetching saved themePath from localStorage
+  let savedThemePath = localStorage.getItem("themePath");
+  if (savedThemePath != undefined) {
+    // applying saved Theme
+    $("#ref-css").attr("href", savedThemePath);
+
+    if (savedThemePath == "../../../dark-theme-style.css") {
+      $("#navBar").css("background-color", "#EC612D"); // nav bar orange color
+      $("#darkThemeSwitch").attr("checked", true);
+      console.log("Loading Dark theme stylesheet from: " + savedThemePath);
+    } else {
+      $("#navBar").css("background-color", "#EAECEF"); // nav bar grey color
+      $("#darkThemeSwitch").attr("checked", false);
+      console.log("Loading Light theme stylesheet from: " + savedThemePath);
+
+    }
+  }
+}
 
 function getUserDataFromAPI(userName) {
   // accessing the api base url
@@ -33,15 +71,26 @@ function getUserDataFromAPI(userName) {
 
   // accessing the http client for making api call
   var client = new HttpClient();
-  client.get(baseURL + userName, function(response) {
+  client.get(baseURL + userName, function(response, message, statusCode) {
     let jsonData = JSON.parse(response);
 
-    // removing the dimScreen class
-    let dimScreen = document.getElementById("dimScreen");
-    dimScreen.classList.remove("overlay");
 
-    // updating the user data content on Page
-    updateUserDataUI(jsonData);
+    if (statusCode == 200) {
+      // fetch user repos from api
+      getUserReposFromAPI(userName);
+
+      // updating the user data content on Page
+      updateUserDataUI(jsonData);
+
+    } else if (statusCode == 403) {
+      alert(message + "\n Status Code: " + statusCode);
+    } else if (statusCode == 404) {
+      alert("Username " + message + "\n Status Code: " + statusCode);
+      // no username found go back to searchUser screen
+      window.location.href = "../searchUser/index.html";
+    } else {
+      alert("An unknown error occured \n Status Code: " + statusCode);
+    }
 
   });
 }
@@ -53,23 +102,35 @@ function getUserReposFromAPI(userName) {
 
   // accessing the http client for making api call
   var client = new HttpClient();
-  client.get(baseURL + userName + repoEndPoint, function(response) {
+  client.get(baseURL + userName + repoEndPoint, function(response, message, statusCode) {
     let jsonData = JSON.parse(response);
 
-    // removing the dimScreen class
-    let dimScreen = document.getElementById("dimScreen");
-    dimScreen.classList.remove("overlay");
+    if (statusCode == 200) {
+      // removing the dimScreen class
+      let dimScreen = document.getElementById("dimScreen");
+      dimScreen.classList.remove("overlay");
 
-    // updating the repo data on Page
-    updateRepoDataUI(jsonData);
+      // updating the repo data on Page
+      updateRepoDataUI(jsonData);
+
+    } else if (statusCode == 403) {
+      alert(message + "\n Status Code: " + statusCode);
+    } else if (statusCode == 404) {
+      alert("Repos " + message + "\n Status Code: " + statusCode);
+    } else {
+      alert("An unknown error occured \n Status Code: " + statusCode);
+    }
 
   });
 }
 
 function updateUserDataUI(data) {
+  // fetching saved userName in localStorage
+  let savedUserName = localStorage.getItem("userName");
+
   // page title heading
   let username = document.getElementById("username");
-  username.innerHTML = data.login;
+  username.innerHTML = data.login ? data.login : savedUserName;
 
 
   // left top card data
@@ -80,12 +141,12 @@ function updateUserDataUI(data) {
   let followers = document.getElementById("followers");
   let following = document.getElementById("following");
 
-  imgURL.src = data.avatar_url;
-  fullName.innerHTML = data.name;
-  company.innerHTML = data.company;
-  location.innerHTML = data.location;
-  followers.innerHTML = data.followers;
-  following.innerHTML = data.following;
+  imgURL.src = data.avatar_url ? data.avatar_url : "https://cdn0.iconfinder.com/data/icons/octicons/1024/mark-github-512.png";
+  fullName.innerHTML = data.name ? data.name : "-";
+  company.innerHTML = data.company ? data.company : "-";
+  location.innerHTML = data.location ? data.location : "-";
+  followers.innerHTML = data.followers ? data.followers : "0";
+  following.innerHTML = data.following ? data.following : "0";
 
   // left bottom card data
   let github = document.getElementById("github");
@@ -95,12 +156,12 @@ function updateUserDataUI(data) {
   let joinedOn = document.getElementById("joinedOn");
 
 
-  github.innerHTML = data.login;
+  github.innerHTML = data.login ? data.login : savedUserName;
 
   twitter.innerHTML = data.twitter_username ? "@" + data.twitter_username : "-";
-  repos.innerHTML = data.public_repos;
-  gists.innerHTML = data.public_gists;
-  joinedOn.innerHTML = formatDate(data.created_at);
+  repos.innerHTML = data.public_repos ? data.public_repos : "-";
+  gists.innerHTML = data.public_gists ? data.public_gists : "-";
+  joinedOn.innerHTML = data.created_at ? formatDate(data.created_at) : "-";
 
 
   // left top card data
@@ -112,12 +173,12 @@ function updateUserDataUI(data) {
   let hireable = document.getElementById("hireable");
   let hireableText = document.getElementById("hireableText");
 
-  fullNameee.innerHTML = data.name;
-  biooo.innerHTML = data.bio;
-  // emailll.innerHTML = data.email;
-  websiteee.innerHTML = data.blog;
-  addresss.innerHTML = data.location;
-  let hireableState = data.hireable;
+  fullNameee.innerHTML = data.name ? data.name : "-";
+  biooo.innerHTML = data.bio ? data.bio : "-";
+  // emailll.innerHTML = data.email ? data.email : "-";
+  websiteee.innerHTML = data.blog ? data.blog : "-";
+  addresss.innerHTML = data.location ? data.location : "-";
+  let hireableState = data.hireable ? data.hireable : false;
 
   if (hireableState) {
     hireableText.innerHTML = "Yes";
@@ -130,7 +191,7 @@ function updateUserDataUI(data) {
 }
 
 function updateRepoDataUI(jsonData) {
-  console.log(jsonData);
+  // console.log(jsonData);
 
   jsonData.forEach(function(repoDetails, idx, array) {
 
@@ -167,9 +228,16 @@ function updateRepoDataUI(jsonData) {
 
 
     var divRepoUrl = document.createElement("div");
-    divRepoUrl.className = "col-sm-9 text-secondary";
+    divRepoUrl.className = "col-sm-9";
     divRepoUrl.style.display = "block";
-    divRepoUrl.innerHTML = repoDetails.html_url;
+
+    var repoLinkTag = document.createElement("a");
+    var repoLink = document.createTextNode(repoDetails.html_url);
+    repoLinkTag.href = repoDetails.html_url;
+    repoLinkTag.appendChild(repoLink);
+    divRepoUrl.className = "col-sm-9";
+
+    divRepoUrl.appendChild(repoLinkTag);
 
     // append divRepoUrl div -> divRow div
     divRow.appendChild(divRepoUrl);
@@ -181,7 +249,7 @@ function updateRepoDataUI(jsonData) {
     let reposDiv = document.getElementById("reposDiv");
     reposDiv.appendChild(divRow);
 
-    if (idx === 2) {
+    if (idx === 2 || idx === array.length - 1) {
       // don't append horizontal row because last item
     } else {
       // append horizantal line
@@ -209,7 +277,6 @@ function formatDate(dateee) {
   }
 
   let finalDateString = dt + '-' + month + '-' + year;
-  console.log(finalDateString);
   return finalDateString;
 }
 
