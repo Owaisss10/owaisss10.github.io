@@ -3852,8 +3852,9 @@ button.bg-dark:focus {
     display: inline !important; }
   .d-sm-inline-block {
     display: inline-block !important; }
-  .d-sm-block {
-    display: block !important; }
+    .d-sm-block {
+      display: block !important;
+      border: none; }
   .d-sm-table {
     display: table !important; }
   .d-sm-table-row {
