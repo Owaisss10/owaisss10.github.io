@@ -10,12 +10,38 @@ const day = 15
 const month = 12
 const year = 1996
 
-/* Document Ready Function */
-jQuery(document).ready(function ($) {
+// Document Ready Function 
+document.addEventListener('DOMContentLoaded', function () {
   loadBirthdayTimer();
+  loadConfetti();
+}, false);
+
+// Handles click/tap on the page
+window.addEventListener("click", function (event) {
+  loadConfetti()
 });
 
 /* Functions */
+function loadConfetti() {
+  const start = () => {
+    setTimeout(function () {
+      confetti.start()
+      isConfettiRunning = true
+    }, 1000);
+  };
+
+  //  for stopping the confetti 
+  const stop = () => {
+    setTimeout(function () {
+      confetti.stop()
+      isConfettiRunning = false
+    }, 2000);
+  };
+
+  start();
+  stop();
+}
+
 function loadBirthdayTimer() {
   const daysHtml = document.getElementById('days');
   const hoursHtml = document.getElementById('hours');
