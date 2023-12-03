@@ -69,7 +69,7 @@ typings/
 .nuxt
 
 # Nuxt generate
-dist
+# dist
 
 # vuepress build output
 .vuepress/dist
@@ -96,7 +96,7 @@ sw.*
 .nuxt
 .nitro
 .cache
-dist
+# dist
 
 # Node dependencies
 node_modules
