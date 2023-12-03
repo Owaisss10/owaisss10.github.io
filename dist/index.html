@@ -1,78 +1,641 @@
 <!doctype html>
 <html data-n-head-ssr>
-  <head>
-    <title>Awais Akram</title><meta data-n-head="ssr" charset="utf-8"><meta data-n-head="ssr" name="viewport" content="width=device-width,initial-scale=1"><meta data-n-head="ssr" data-hid="description" name="description" content="#### Developed using BootStrap, jQuery and Javascript."><link data-n-head="ssr" rel="icon" type="image/x-icon" href="/favicon.ico"><link data-n-head="ssr" rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:100,200,300,400,500,600,700,800,900"><link data-n-head="ssr" rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i"><link data-n-head="ssr" rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css"><link data-n-head="ssr" rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"><link data-n-head="ssr" rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous"><link data-n-head="ssr" rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous"><script data-n-head="ssr" src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/js/solid.min.js"></script><script data-n-head="ssr" src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script><script data-n-head="ssr" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script><script data-n-head="ssr" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script><link rel="preload" href="/_nuxt/runtime.3b10413.js" as="script"><link rel="preload" href="/_nuxt/commons.app.874c821.js" as="script"><link rel="preload" href="/_nuxt/vendors.app.b511834.js" as="script"><link rel="preload" href="/_nuxt/app.d2b239d.js" as="script"><link rel="preload" href="/_nuxt/pages/index.6909c8c.js" as="script"><style data-vue-ssr-id="4b0b1e10:0 7e56e4e3:0 56b15182:0 d949b6ea:0 f4ebe188:0">body{font-family:Open Sans,serif;padding-top:54px}body,h1,h2,h3,h4,h5,h6{color:#343a40;color:var(--color-text-primary)}h1,h2,h3,h4,h5,h6{font-family:Saira Extra Condensed,serif;font-weight:700;text-transform:uppercase}h1{font-size:6rem;line-height:5.5rem}h2{font-size:3.5rem}.subheading{text-transform:uppercase;font-weight:500;font-family:Saira Extra Condensed,serif;font-size:1.35rem}.list-social-icons a{color:#478547;color:var(--color-primary)}.list-social-icons a:hover{color:#276827;color:var(--color-primary-hover)}.list-social-icons a .fa-lg{font-size:1.75rem}.list-icons{font-size:3rem}.list-icons .list-inline-item i:hover{color:#276827;color:var(--color-primary-hover)}#sideNav .navbar-nav .nav-item .nav-link{font-weight:600;text-transform:uppercase}@media (min-width:992px){#sideNav{text-align:center;position:fixed;top:0;left:0;display:flex;flex-direction:column;width:17rem;height:100vh}#sideNav .navbar-brand{display:flex;margin:auto auto 0;padding:.5rem}#sideNav .navbar-brand .img-profile{max-width:10rem;max-height:10rem;border:.5rem solid hsla(0,0%,100%,.2)}#sideNav .navbar-collapse{display:flex;align-items:flex-start;flex-grow:0;width:100%;margin-bottom:auto}#sideNav .navbar-collapse .navbar-nav{flex-direction:column;width:100%}#sideNav .navbar-collapse .navbar-nav .nav-item,#sideNav .navbar-collapse .navbar-nav .nav-item .nav-link{display:block}}section.resume-section{border-bottom:1px solid #868e96;border-bottom:1px solid var(--color);padding-top:5rem!important;padding-bottom:5rem!important}section.resume-section .resume-item .resume-date{min-width:none}@media (min-width:768px){section.resume-section{min-height:100vh}section.resume-section .resume-item .resume-date{min-width:18rem}}@media (min-width:992px){section.resume-section{padding-top:3rem!important;padding-bottom:3rem!important}}.bg-primary{background-color:#478547!important;background-color:var(--color-primary)!important}.text-primary{color:#343a40!important;color:var(--color-text-primary)!important}a{color:#3b833b;color:var(--color-secondary)}a:active,a:focus,a:hover{color:#276827;color:var(--color-primary-hover)}.vue-typer .custom.char{color:#343a40;color:var(--color-text-primary)}.card-body,.card-title{color:#868e96}:root{--color:#868e96;--color-primary:#478547;--color-secondary:#3b833b;--color-primary-hover:#276827;--color-text-primary:#343a40;--color-text-secondary:#e2e2e2;--color-text-third:#343a40;--bg:#f3f5f4;--bg-secondary:#fff;--border-color:#ddd}.dark-mode{--color:#ebf4f1;--color-primary:#0a0d0f;--color-secondary:#000;--color-primary-hover:#020405;--color-text-primary:#fff;--color-text-secondary:#e2e2e2;--bg:#081927;--bg-secondary:#071521;--border-color:#0d2538}body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue,sans-seriff;background-color:#f3f5f4;background-color:var(--bg);color:#868e96;color:var(--color);transition:background-color .3s}a{color:#478547;color:var(--color-primary)}.nuxt-progress{position:fixed;top:0;left:0;right:0;height:2px;width:0;opacity:1;transition:width .1s,opacity .4s;background-color:#3b8070;z-index:999999}.nuxt-progress.nuxt-progress-notransition{transition:none}.nuxt-progress-failed{background-color:red}html{font-family:Source Sans Pro,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;font-size:16px;word-spacing:1px;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;box-sizing:border-box}*,:after,:before{box-sizing:border-box;margin:0}.button--green{display:inline-block;border-radius:4px;border:1px solid #3b8070;color:#3b8070;text-decoration:none;padding:10px 30px}.button--green:hover{color:#fff;background-color:#3b8070}.button--grey{display:inline-block;border-radius:4px;border:1px solid #35495e;color:#35495e;text-decoration:none;padding:10px 30px;margin-left:15px}.button--grey:hover{color:#fff;background-color:#35495e}h1[data-v-4551c98e]{font-size:3rem;line-height:5.5rem}@media (min-width:992px){.resume[data-v-4551c98e]{padding-top:0;padding-left:17rem}}.card{border:none}</style>
-  </head>
-  <body>
-    <script data-n-head="ssr" data-hid="nuxt-color-mode-script" data-pbody="true">!function (){"use strict";var e=window,t=document,s=t.documentElement,n=["dark","light"],a=function(e){for(var s=e+"=",n=t.cookie.split(";"),a=0;a<n.length;a++){for(var o=n[a];" "===o.charAt(0);)o=o.substring(1,o.length);if(0===o.indexOf(s))return o.substring(s.length,o.length)}return null}("nuxt-color-mode")||"system",o="system"===a?i():a;function r(e){var t=e+"-mode";s.classList?s.classList.add(t):s.className+=" "+t}function c(t){return e.matchMedia("(prefers-color-scheme"+t+")")}function i(){if(e.matchMedia&&"not all"!==c("").media)for(var t of n)if(c(":"+t).matches)return t;return"light"}r(o),e["__NUXT_COLOR_MODE__"]={preference:a,value:o,getColorScheme:i,addClass:r,removeClass:function(e){var t=e+"-mode";s.classList?s.classList.remove(t):s.className=s.className.replace(new RegExp(t,"g"),"")}}}();
-</script><div data-server-rendered="true" id="__nuxt"><!----><div id="__layout"><div><div class="container content"><section data-v-4551c98e><nav id="sideNav" class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" data-v-4551c98e><a href="#page-top" class="navbar-brand js-scroll-trigger" data-v-4551c98e><span class="d-block d-lg-none" data-v-4551c98e>Resume - Awais Akram</span> <span class="d-none d-lg-block" data-v-4551c98e><img src="/profile.jpg" alt class="img-fluid img-profile rounded-circle mx-auto mb-2" data-v-4551c98e></span></a> <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-v-4551c98e><span class="navbar-toggler-icon" data-v-4551c98e></span></button> <div id="navbarSupportedContent" class="collapse navbar-collapse" data-v-4551c98e><ul class="navbar-nav" data-v-4551c98e><li class="nav-item" data-v-4551c98e><a href="#" class="nav-link js-scroll-trigger" data-v-4551c98e>About</a></li> <li class="nav-item" data-v-4551c98e><a href="#" class="nav-link js-scroll-trigger" data-v-4551c98e>Education</a></li> <li class="nav-item" data-v-4551c98e><a href="#" class="nav-link js-scroll-trigger" data-v-4551c98e>Experience</a></li> <li class="nav-item" data-v-4551c98e><a href="#" class="nav-link js-scroll-trigger" data-v-4551c98e>Skills</a></li> <li class="nav-item" data-v-4551c98e><a href="#" class="nav-link js-scroll-trigger" data-v-4551c98e>Interests</a></li> <li class="nav-item" data-v-4551c98e><a href="#" class="nav-link js-scroll-trigger" data-v-4551c98e>Projects</a></li> <li class="nav-item" data-v-4551c98e><div style="position:fixed;bottom:10px;left:10px;z-index:1000" data-v-4551c98e><div data-v-4551c98e><i class="fas fa-sun btn" style="font-size:35px;color:#fff"></i></div></div></li> <li class="nav-item" data-v-4551c98e><div style="position:fixed;bottom:10px;right:10px;z-index:1000" data-v-4551c98e><a href="/" aria-current="page" class="btn btn-light nuxt-link-exact-active nuxt-link-active" data-v-4551c98e>EN</a></div></li></ul></div></nav> <div class="resume" data-v-4551c98e><section id="page-top" data-v-4551c98e><div class="container-fluid p-0"><section id="about" class="resume-section p-3 p-lg-5 d-flex d-column"><div class="my-auto"><h1 class="mb-0">
-    Awais
-    <span class="text-primary">Akram</span></h1> <h3 class="mb-4"><vue-typer text="Software Enginneer,Mobile Application Developer,UI design enthusiast!" repeat="Infinity" shuffle="true" initial-action="typing" pre-type-delay="100" type-delay="82" pre-erase-delay="2000" erase-delay="30" erase-style="backspace" caret-animation="blink"></vue-typer></h3> <div class="subheading mb-5">
-    Helsinki, Finland · +358 50 471 0970 ·
-    <a href="mailto:name@email.com">owaisakram103@gmail.com</a></div> <p class="mb-5">
-    Working as an aspiring and dedicated Mobile Application Developer and having six-years post qualification experience in iOS app development and deployment at Apple Store. 
+
+<head>
+  <title>Awais Akram</title>
+  <meta data-n-head="ssr" charset="utf-8">
+  <meta data-n-head="ssr" name="viewport" content="width=device-width,initial-scale=1">
+  <meta data-n-head="ssr" data-hid="description" name="description"
+    content="#### Developed using BootStrap, jQuery and Javascript.">
+  <link data-n-head="ssr" rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link data-n-head="ssr" rel="stylesheet" type="text/css"
+    href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:100,200,300,400,500,600,700,800,900">
+  <link data-n-head="ssr" rel="stylesheet" type="text/css"
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
+  <link data-n-head="ssr" rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css">
+  <link data-n-head="ssr" rel="stylesheet" type="text/css"
+    href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+  <link data-n-head="ssr" rel="stylesheet" type="text/css"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+    integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+  <link data-n-head="ssr" rel="stylesheet" type="text/css"
+    href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+    integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+  <script data-n-head="ssr" src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/js/solid.min.js"></script>
+  <script data-n-head="ssr" src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script data-n-head="ssr" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script data-n-head="ssr" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <link rel="preload" href="_nuxt/runtime.3b10413.js" as="script">
+  <link rel="preload" href="_nuxt/commons.app.874c821.js" as="script">
+  <link rel="preload" href="_nuxt/vendors.app.b511834.js" as="script">
+  <link rel="preload" href="_nuxt/app.d2b239d.js" as="script">
+  <link rel="preload" href="_nuxt/pages/index.6909c8c.js" as="script">
+  <style data-vue-ssr-id="4b0b1e10:0 7e56e4e3:0 56b15182:0 d949b6ea:0 f4ebe188:0">
+    body {
+      font-family: Open Sans, serif;
+      padding-top: 54px
+    }
+
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: #343a40;
+      color: var(--color-text-primary)
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: Saira Extra Condensed, serif;
+      font-weight: 700;
+      text-transform: uppercase
+    }
+
+    h1 {
+      font-size: 6rem;
+      line-height: 5.5rem
+    }
+
+    h2 {
+      font-size: 3.5rem
+    }
+
+    .subheading {
+      text-transform: uppercase;
+      font-weight: 500;
+      font-family: Saira Extra Condensed, serif;
+      font-size: 1.35rem
+    }
+
+    .list-social-icons a {
+      color: #478547;
+      color: var(--color-primary)
+    }
+
+    .list-social-icons a:hover {
+      color: #276827;
+      color: var(--color-primary-hover)
+    }
+
+    .list-social-icons a .fa-lg {
+      font-size: 1.75rem
+    }
+
+    .list-icons {
+      font-size: 3rem
+    }
+
+    .list-icons .list-inline-item i:hover {
+      color: #276827;
+      color: var(--color-primary-hover)
+    }
+
+    #sideNav .navbar-nav .nav-item .nav-link {
+      font-weight: 600;
+      text-transform: uppercase
+    }
+
+    @media (min-width:992px) {
+      #sideNav {
+        text-align: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        width: 17rem;
+        height: 100vh
+      }
+
+      #sideNav .navbar-brand {
+        display: flex;
+        margin: auto auto 0;
+        padding: .5rem
+      }
+
+      #sideNav .navbar-brand .img-profile {
+        max-width: 10rem;
+        max-height: 10rem;
+        border: .5rem solid hsla(0, 0%, 100%, .2)
+      }
+
+      #sideNav .navbar-collapse {
+        display: flex;
+        align-items: flex-start;
+        flex-grow: 0;
+        width: 100%;
+        margin-bottom: auto
+      }
+
+      #sideNav .navbar-collapse .navbar-nav {
+        flex-direction: column;
+        width: 100%
+      }
+
+      #sideNav .navbar-collapse .navbar-nav .nav-item,
+      #sideNav .navbar-collapse .navbar-nav .nav-item .nav-link {
+        display: block
+      }
+    }
+
+    section.resume-section {
+      border-bottom: 1px solid #868e96;
+      border-bottom: 1px solid var(--color);
+      padding-top: 5rem !important;
+      padding-bottom: 5rem !important
+    }
+
+    section.resume-section .resume-item .resume-date {
+      min-width: none
+    }
+
+    @media (min-width:768px) {
+      section.resume-section {
+        min-height: 100vh
+      }
+
+      section.resume-section .resume-item .resume-date {
+        min-width: 18rem
+      }
+    }
+
+    @media (min-width:992px) {
+      section.resume-section {
+        padding-top: 3rem !important;
+        padding-bottom: 3rem !important
+      }
+    }
+
+    .bg-primary {
+      background-color: #478547 !important;
+      background-color: var(--color-primary) !important
+    }
+
+    .text-primary {
+      color: #343a40 !important;
+      color: var(--color-text-primary) !important
+    }
+
+    a {
+      color: #3b833b;
+      color: var(--color-secondary)
+    }
+
+    a:active,
+    a:focus,
+    a:hover {
+      color: #276827;
+      color: var(--color-primary-hover)
+    }
+
+    .vue-typer .custom.char {
+      color: #343a40;
+      color: var(--color-text-primary)
+    }
+
+    .card-body,
+    .card-title {
+      color: #868e96
+    }
+
+    :root {
+      --color: #868e96;
+      --color-primary: #478547;
+      --color-secondary: #3b833b;
+      --color-primary-hover: #276827;
+      --color-text-primary: #343a40;
+      --color-text-secondary: #e2e2e2;
+      --color-text-third: #343a40;
+      --bg: #f3f5f4;
+      --bg-secondary: #fff;
+      --border-color: #ddd
+    }
+
+    .dark-mode {
+      --color: #ebf4f1;
+      --color-primary: #0a0d0f;
+      --color-secondary: #000;
+      --color-primary-hover: #020405;
+      --color-text-primary: #fff;
+      --color-text-secondary: #e2e2e2;
+      --bg: #081927;
+      --bg-secondary: #071521;
+      --border-color: #0d2538
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-seriff;
+      background-color: #f3f5f4;
+      background-color: var(--bg);
+      color: #868e96;
+      color: var(--color);
+      transition: background-color .3s
+    }
+
+    a {
+      color: #478547;
+      color: var(--color-primary)
+    }
+
+    .nuxt-progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      width: 0;
+      opacity: 1;
+      transition: width .1s, opacity .4s;
+      background-color: #3b8070;
+      z-index: 999999
+    }
+
+    .nuxt-progress.nuxt-progress-notransition {
+      transition: none
+    }
+
+    .nuxt-progress-failed {
+      background-color: red
+    }
+
+    html {
+      font-family: Source Sans Pro, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
+      font-size: 16px;
+      word-spacing: 1px;
+      -ms-text-size-adjust: 100%;
+      -webkit-text-size-adjust: 100%;
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-font-smoothing: antialiased;
+      box-sizing: border-box
+    }
+
+    *,
+    :after,
+    :before {
+      box-sizing: border-box;
+      margin: 0
+    }
+
+    .button--green {
+      display: inline-block;
+      border-radius: 4px;
+      border: 1px solid #3b8070;
+      color: #3b8070;
+      text-decoration: none;
+      padding: 10px 30px
+    }
+
+    .button--green:hover {
+      color: #fff;
+      background-color: #3b8070
+    }
+
+    .button--grey {
+      display: inline-block;
+      border-radius: 4px;
+      border: 1px solid #35495e;
+      color: #35495e;
+      text-decoration: none;
+      padding: 10px 30px;
+      margin-left: 15px
+    }
+
+    .button--grey:hover {
+      color: #fff;
+      background-color: #35495e
+    }
+
+    h1[data-v-4551c98e] {
+      font-size: 3rem;
+      line-height: 5.5rem
+    }
+
+    @media (min-width:992px) {
+      .resume[data-v-4551c98e] {
+        padding-top: 0;
+        padding-left: 17rem
+      }
+    }
+
+    .card {
+      border: none
+    }
+  </style>
+</head>
+
+<body>
+  <script data-n-head="ssr" data-hid="nuxt-color-mode-script" data-pbody="true">!function () { "use strict"; var e = window, t = document, s = t.documentElement, n = ["dark", "light"], a = function (e) { for (var s = e + "=", n = t.cookie.split(";"), a = 0; a < n.length; a++) { for (var o = n[a]; " " === o.charAt(0);)o = o.substring(1, o.length); if (0 === o.indexOf(s)) return o.substring(s.length, o.length) } return null }("nuxt-color-mode") || "system", o = "system" === a ? i() : a; function r(e) { var t = e + "-mode"; s.classList ? s.classList.add(t) : s.className += " " + t } function c(t) { return e.matchMedia("(prefers-color-scheme" + t + ")") } function i() { if (e.matchMedia && "not all" !== c("").media) for (var t of n) if (c(":" + t).matches) return t; return "light" } r(o), e["__NUXT_COLOR_MODE__"] = { preference: a, value: o, getColorScheme: i, addClass: r, removeClass: function (e) { var t = e + "-mode"; s.classList ? s.classList.remove(t) : s.className = s.className.replace(new RegExp(t, "g"), "") } } }();
+  </script>
+  <div data-server-rendered="true" id="__nuxt"><!---->
+    <div id="__layout">
+      <div>
+        <div class="container content">
+          <section data-v-4551c98e>
+            <nav id="sideNav" class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" data-v-4551c98e><a
+                href="#page-top" class="navbar-brand js-scroll-trigger" data-v-4551c98e><span class="d-block d-lg-none"
+                  data-v-4551c98e>Resume - Awais Akram</span> <span class="d-none d-lg-block" data-v-4551c98e><img
+                    src="/profile.jpg" alt class="img-fluid img-profile rounded-circle mx-auto mb-2"
+                    data-v-4551c98e></span></a> <button type="button" data-toggle="collapse"
+                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation" class="navbar-toggler" data-v-4551c98e><span class="navbar-toggler-icon"
+                  data-v-4551c98e></span></button>
+              <div id="navbarSupportedContent" class="collapse navbar-collapse" data-v-4551c98e>
+                <ul class="navbar-nav" data-v-4551c98e>
+                  <li class="nav-item" data-v-4551c98e><a href="#" class="nav-link js-scroll-trigger"
+                      data-v-4551c98e>About</a></li>
+                  <li class="nav-item" data-v-4551c98e><a href="#" class="nav-link js-scroll-trigger"
+                      data-v-4551c98e>Education</a></li>
+                  <li class="nav-item" data-v-4551c98e><a href="#" class="nav-link js-scroll-trigger"
+                      data-v-4551c98e>Experience</a></li>
+                  <li class="nav-item" data-v-4551c98e><a href="#" class="nav-link js-scroll-trigger"
+                      data-v-4551c98e>Skills</a></li>
+                  <li class="nav-item" data-v-4551c98e><a href="#" class="nav-link js-scroll-trigger"
+                      data-v-4551c98e>Interests</a></li>
+                  <li class="nav-item" data-v-4551c98e><a href="#" class="nav-link js-scroll-trigger"
+                      data-v-4551c98e>Projects</a></li>
+                  <li class="nav-item" data-v-4551c98e>
+                    <div style="position:fixed;bottom:10px;left:10px;z-index:1000" data-v-4551c98e>
+                      <div data-v-4551c98e><i class="fas fa-sun btn" style="font-size:35px;color:#fff"></i></div>
+                    </div>
+                  </li>
+                  <li class="nav-item" data-v-4551c98e>
+                    <div style="position:fixed;bottom:10px;right:10px;z-index:1000" data-v-4551c98e><a href="/"
+                        aria-current="page" class="btn btn-light nuxt-link-exact-active nuxt-link-active"
+                        data-v-4551c98e>EN</a></div>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+            <div class="resume" data-v-4551c98e>
+              <section id="page-top" data-v-4551c98e>
+                <div class="container-fluid p-0">
+                  <section id="about" class="resume-section p-3 p-lg-5 d-flex d-column">
+                    <div class="my-auto">
+                      <h1 class="mb-0">
+                        Awais
+                        <span class="text-primary">Akram</span>
+                      </h1>
+                      <h3 class="mb-4"><vue-typer
+                          text="Software Enginneer,Mobile Application Developer,UI design enthusiast!" repeat="Infinity"
+                          shuffle="true" initial-action="typing" pre-type-delay="100" type-delay="82"
+                          pre-erase-delay="2000" erase-delay="30" erase-style="backspace"
+                          caret-animation="blink"></vue-typer></h3>
+                      <div class="subheading mb-5">
+                        Helsinki, Finland · +358 50 471 0970 ·
+                        <a href="mailto:name@email.com">owaisakram103@gmail.com</a>
+                      </div>
+                      <p class="mb-5">
+                        Working as an aspiring and dedicated Mobile Application Developer and having six-years post
+                        qualification experience in iOS app development and deployment at Apple Store.
 
 
-I possess proven successful experience of creating, maintaining, and implementing source code for back-end functionalities mobile and web applications to work properly and also of designing and developing user interfaces. 
+                        I possess proven successful experience of creating, maintaining, and implementing source code
+                        for back-end functionalities mobile and web applications to work properly and also of designing
+                        and developing user interfaces.
 
 
-Equipped with first-class analytical and apt problem-solving skills; I am able to work on own initiative and as a reliable part of cross-functional team!!!
-  </p> <ul class="list-inline list-social-icons mb-0"><li class="list-inline-item"><a target="blank" href="https://www.linkedin.com/in/owaisss10/"><span class="fa-stack fa-lg"><i class="fas fa-circle fa-stack-2x"></i> <i class="fab fa-linkedin-in fa-stack-1x fa-inverse"></i></span></a></li> <li class="list-inline-item"><a target="blank" href="https://github.com/owaisss10/"><span class="fa-stack fa-lg"><i class="fas fa-circle fa-stack-2x"></i> <i class="fab fa-github-alt fa-stack-1x fa-inverse"></i></span></a></li></ul></div></section> <section id="education" class="resume-section p-3 p-lg-5 d-flex flex-column"><div class="my-auto"><h2 class="mb-5">Education 📕</h2> <div class="resume-item d-flex flex-column flex-md-row mb-5"><div class="resume-content mr-auto"><h3 class="mb-0">University of Eastern Finland(UEF) - Joensuu, Finland</h3> <div class="subheading mb-3">INTERNATIONAL MASTER'S DEGREE PROGRAMME IN INFORMATION TECHNOLOGY (IMPIT)</div> <div>Master's Thesis: Random Swap K-means Clustering Optimization</div><div>CGPA: 4.0/5.0</div></div> <div class="resume-date text-md-right"><span class="text-primary">September 2019 - June 2021</span></div></div><div class="resume-item d-flex flex-column flex-md-row mb-5"><div class="resume-content mr-auto"><h3 class="mb-0">University of Arid Agriculture - Rawalpindi, Pakistan</h3> <div class="subheading mb-3">BACHELOR OF SCIENCE IN INFORMATION TECHNOLOGY (B.SC.)</div> <div>Bachelor's Thesis: Fake Calculator - Data Vault (iOS App)</div><div>CGPA: 3.26/4.00</div></div> <div class="resume-date text-md-right"><span class="text-primary">September 2013 - August 2017</span></div></div></div></section> <section id="experience" class="resume-section p-3 p-lg-5 d-flex flex-column"><div class="my-auto"><h2 class="mb-5">Work Expecience 🔨</h2> <div class="resume-item d-flex flex-column flex-md-row mb-5"><div class="resume-content mr-auto"><h3 class="mb-0">Software Engineer / Mobile App Developer</h3> <div class="subheading mb-3">HyperIn Oy - Helsinki, FI</div> <p>
-        - iOS mobile development in an agile environment
-      </p><p>
-        - Creating and maintaining feature and process documentation related to mobile development
-      </p><p>
-        - Giving support to operations for delivering the mobile applications
-      </p></div> <div class="resume-date text-md-right"><span class="text-primary">June 2021 - Present</span></div></div><div class="resume-item d-flex flex-column flex-md-row mb-5"><div class="resume-content mr-auto"><h3 class="mb-0">Research Assistant</h3> <div class="subheading mb-3">University of Eastern Finland - Joensuu, FI</div> <p>
-        - Maps with Apple MapKit and Google Maps SDKs
-      </p><p>
-        - Google Directions and OSRM Directions and Routing
-      </p><p>
-        - Travelling Salesman Problem in Mobile Application Development Field
-      </p><p>
-        - Writing scripts in PHP
-      </p></div> <div class="resume-date text-md-right"><span class="text-primary">October 2019 - May 2021</span></div></div><div class="resume-item d-flex flex-column flex-md-row mb-5"><div class="resume-content mr-auto"><h3 class="mb-0">iOS Application Developer</h3> <div class="subheading mb-3">Digital Prodigy Limited (DPL) - Islamabad, PK</div> <p>
-        - Test Driven Development - Unit Testing
-      </p><p>
-        - Automated Deployment of Apps - FastLane
-      </p><p>
-        - Hybrid App Development (React Native & Vue.js)
-      </p><p>
-        - Client Communication (Empathic Listening)
-      </p></div> <div class="resume-date text-md-right"><span class="text-primary">March 2019 - August 2019</span></div></div><div class="resume-item d-flex flex-column flex-md-row mb-5"><div class="resume-content mr-auto"><h3 class="mb-0">iOS Application Developer</h3> <div class="subheading mb-3">Apollo Telecom (Pvt) Ltd. - Islamabad, PK</div> <p>
-        - Refined innovative user interface solutions
-      </p><p>
-        - Managed approval process for App Store
-      </p><p>
-        - Push Notifications - PUSHER
-      </p><p>
-        - Used sketches scenarios flows and paper prototypes
-      </p></div> <div class="resume-date text-md-right"><span class="text-primary">February 2018 - February 2019</span></div></div><div class="resume-item d-flex flex-column flex-md-row mb-5"><div class="resume-content mr-auto"><h3 class="mb-0">iOS Application Developer</h3> <div class="subheading mb-3">Reactive Space - Rawalpindi, PK</div> <p>
-        - Push Notifications with Firebase Server
-      </p><p>
-        - Developed iPhone app codebases
-      </p><p>
-        - Ensured that all business & design objectives were met
-      </p><p>
-        - Deadline-Driven
-      </p></div> <div class="resume-date text-md-right"><span class="text-primary">October 2017 - January 2018</span></div></div></div></section> <section id="skills" class="resume-section p-3 p-lg-5 d-flex flex-column"><div class="my-auto"><h2 class="mb-5">Skills 🎯</h2> <div class="subheading mb-3">Programming Languages & Tools</div> <ul class="list-inline list-icons" style="text-align:center"><li class="list-inline-item"><i class="devicon-swift-plain"></i></li><li class="list-inline-item"><i class="devicon-objectivec-plain"></i></li><li class="list-inline-item"><i class="devicon-flutter-plain"></i></li><li class="list-inline-item"><i class="devicon-android-plain"></i></li><li class="list-inline-item"><i class="devicon-kotlin-plain"></i></li><li class="list-inline-item"><i></i></li><li class="list-inline-item"><i class="devicon-html5-plain-wordmark"></i></li><li class="list-inline-item"><i class="devicon-javascript-plain"></i></li><li class="list-inline-item"><i class="devicon-css3-plain-wordmark"></i></li><li class="list-inline-item"><i class="devicon-bootstrap-plain"></i></li><li class="list-inline-item"><i class="devicon-vuejs-plain"></i></li><li class="list-inline-item"><i class="devicon-nodejs-plain"></i></li><li class="list-inline-item"><i></i></li><li class="list-inline-item"><i class="devicon-github-original"></i></li><li class="list-inline-item"><i></i></li><li class="list-inline-item"><i class="devicon-visualstudio-plain"></i></li><li class="list-inline-item"><i class="devicon-xcode-plain"></i></li><li class="list-inline-item"><i class="devicon-androidstudio-plain"></i></li></ul> <div class="subheading mb-3">Workflow</div> <ul class="fa-ul mb-0"><li><i class="fa-li fa fa-check"></i>
-      Responsive Design & UX
-    </li><li><i class="fa-li fa fa-check"></i>
-      Deadline driven
-    </li><li><i class="fa-li fa fa-check"></i>
-      Attention to UI details
-    </li><li><i class="fa-li fa fa-check"></i>
-      Agile Development & Scrum
-    </li><li><i class="fa-li fa fa-check"></i>
-      Team working
-    </li><li><i class="fa-li fa fa-check"></i>
-      Design Patterns
-    </li></ul></div></section> <section id="interests" class="resume-section p-3 p-lg-5 d-flex flex-column"><div class="my-auto"><h2 class="mb-5">Hobbies 😄</h2> <p>
-    Apart from being a web developer, I enjoy most of my time listening and playing music. I love playing piano and singing in my spare time!. 🎹🎵
-  </p> <p class="mb-0">
-    I spend a large amount of my free time exploring the latest technolgy advancements in the frontend and backend web technology development world and coding in my personal projects! 🙌👨‍💻
-  </p></div></section> <section id="projects" class="resume-section p-3 p-lg-5 d-flex flex-column"><div class="my-auto"><h2 class="mb-5">Personal Projects 🦾🧠</h2> <div class="mb-5"><div class="card shadow mb-5 bg-white rounded" style="width:80%;text-align:center"><a href="https://awaisakram.com/nuxtresume/"><img src="/images/resumenuxt.jpg" alt="Kelawar" class="card-img-top"></a> <div class="card-body"><h5 class="card-title">Resume Website</h5> <p class="card-text">
-        My personal resume website.
-      </p></div></div></div></div></section></div></section></div></section></div></div></div></div><script>window.__NUXT__={layout:"default",data:[{}],fetch:[],error:null,serverRendered:!0,routePath:"/",config:{}}</script><script src="/_nuxt/runtime.3b10413.js" defer></script><script src="/_nuxt/pages/index.6909c8c.js" defer></script><script src="/_nuxt/commons.app.874c821.js" defer></script><script src="/_nuxt/vendors.app.b511834.js" defer></script><script src="/_nuxt/app.d2b239d.js" defer></script>
-  </body>
+                        Equipped with first-class analytical and apt problem-solving skills; I am able to work on own
+                        initiative and as a reliable part of cross-functional team!!!
+                      </p>
+                      <ul class="list-inline list-social-icons mb-0">
+                        <li class="list-inline-item"><a target="blank"
+                            href="https://www.linkedin.com/in/owaisss10/"><span class="fa-stack fa-lg"><i
+                                class="fas fa-circle fa-stack-2x"></i> <i
+                                class="fab fa-linkedin-in fa-stack-1x fa-inverse"></i></span></a></li>
+                        <li class="list-inline-item"><a target="blank" href="https://github.com/owaisss10/"><span
+                              class="fa-stack fa-lg"><i class="fas fa-circle fa-stack-2x"></i> <i
+                                class="fab fa-github-alt fa-stack-1x fa-inverse"></i></span></a></li>
+                      </ul>
+                    </div>
+                  </section>
+                  <section id="education" class="resume-section p-3 p-lg-5 d-flex flex-column">
+                    <div class="my-auto">
+                      <h2 class="mb-5">Education 📕</h2>
+                      <div class="resume-item d-flex flex-column flex-md-row mb-5">
+                        <div class="resume-content mr-auto">
+                          <h3 class="mb-0">University of Eastern Finland(UEF) - Joensuu, Finland</h3>
+                          <div class="subheading mb-3">INTERNATIONAL MASTER'S DEGREE PROGRAMME IN INFORMATION TECHNOLOGY
+                            (IMPIT)</div>
+                          <div>Master's Thesis: Random Swap K-means Clustering Optimization</div>
+                          <div>CGPA: 4.0/5.0</div>
+                        </div>
+                        <div class="resume-date text-md-right"><span class="text-primary">September 2019 - June
+                            2021</span></div>
+                      </div>
+                      <div class="resume-item d-flex flex-column flex-md-row mb-5">
+                        <div class="resume-content mr-auto">
+                          <h3 class="mb-0">University of Arid Agriculture - Rawalpindi, Pakistan</h3>
+                          <div class="subheading mb-3">BACHELOR OF SCIENCE IN INFORMATION TECHNOLOGY (B.SC.)</div>
+                          <div>Bachelor's Thesis: Fake Calculator - Data Vault (iOS App)</div>
+                          <div>CGPA: 3.26/4.00</div>
+                        </div>
+                        <div class="resume-date text-md-right"><span class="text-primary">September 2013 - August
+                            2017</span></div>
+                      </div>
+                    </div>
+                  </section>
+                  <section id="experience" class="resume-section p-3 p-lg-5 d-flex flex-column">
+                    <div class="my-auto">
+                      <h2 class="mb-5">Work Expecience 🔨</h2>
+                      <div class="resume-item d-flex flex-column flex-md-row mb-5">
+                        <div class="resume-content mr-auto">
+                          <h3 class="mb-0">Software Engineer / Mobile App Developer</h3>
+                          <div class="subheading mb-3">HyperIn Oy - Helsinki, FI</div>
+                          <p>
+                            - iOS mobile development in an agile environment
+                          </p>
+                          <p>
+                            - Creating and maintaining feature and process documentation related to mobile development
+                          </p>
+                          <p>
+                            - Giving support to operations for delivering the mobile applications
+                          </p>
+                        </div>
+                        <div class="resume-date text-md-right"><span class="text-primary">June 2021 - Present</span>
+                        </div>
+                      </div>
+                      <div class="resume-item d-flex flex-column flex-md-row mb-5">
+                        <div class="resume-content mr-auto">
+                          <h3 class="mb-0">Research Assistant</h3>
+                          <div class="subheading mb-3">University of Eastern Finland - Joensuu, FI</div>
+                          <p>
+                            - Maps with Apple MapKit and Google Maps SDKs
+                          </p>
+                          <p>
+                            - Google Directions and OSRM Directions and Routing
+                          </p>
+                          <p>
+                            - Travelling Salesman Problem in Mobile Application Development Field
+                          </p>
+                          <p>
+                            - Writing scripts in PHP
+                          </p>
+                        </div>
+                        <div class="resume-date text-md-right"><span class="text-primary">October 2019 - May 2021</span>
+                        </div>
+                      </div>
+                      <div class="resume-item d-flex flex-column flex-md-row mb-5">
+                        <div class="resume-content mr-auto">
+                          <h3 class="mb-0">iOS Application Developer</h3>
+                          <div class="subheading mb-3">Digital Prodigy Limited (DPL) - Islamabad, PK</div>
+                          <p>
+                            - Test Driven Development - Unit Testing
+                          </p>
+                          <p>
+                            - Automated Deployment of Apps - FastLane
+                          </p>
+                          <p>
+                            - Hybrid App Development (React Native & Vue.js)
+                          </p>
+                          <p>
+                            - Client Communication (Empathic Listening)
+                          </p>
+                        </div>
+                        <div class="resume-date text-md-right"><span class="text-primary">March 2019 - August
+                            2019</span></div>
+                      </div>
+                      <div class="resume-item d-flex flex-column flex-md-row mb-5">
+                        <div class="resume-content mr-auto">
+                          <h3 class="mb-0">iOS Application Developer</h3>
+                          <div class="subheading mb-3">Apollo Telecom (Pvt) Ltd. - Islamabad, PK</div>
+                          <p>
+                            - Refined innovative user interface solutions
+                          </p>
+                          <p>
+                            - Managed approval process for App Store
+                          </p>
+                          <p>
+                            - Push Notifications - PUSHER
+                          </p>
+                          <p>
+                            - Used sketches scenarios flows and paper prototypes
+                          </p>
+                        </div>
+                        <div class="resume-date text-md-right"><span class="text-primary">February 2018 - February
+                            2019</span></div>
+                      </div>
+                      <div class="resume-item d-flex flex-column flex-md-row mb-5">
+                        <div class="resume-content mr-auto">
+                          <h3 class="mb-0">iOS Application Developer</h3>
+                          <div class="subheading mb-3">Reactive Space - Rawalpindi, PK</div>
+                          <p>
+                            - Push Notifications with Firebase Server
+                          </p>
+                          <p>
+                            - Developed iPhone app codebases
+                          </p>
+                          <p>
+                            - Ensured that all business & design objectives were met
+                          </p>
+                          <p>
+                            - Deadline-Driven
+                          </p>
+                        </div>
+                        <div class="resume-date text-md-right"><span class="text-primary">October 2017 - January
+                            2018</span></div>
+                      </div>
+                    </div>
+                  </section>
+                  <section id="skills" class="resume-section p-3 p-lg-5 d-flex flex-column">
+                    <div class="my-auto">
+                      <h2 class="mb-5">Skills 🎯</h2>
+                      <div class="subheading mb-3">Programming Languages & Tools</div>
+                      <ul class="list-inline list-icons" style="text-align:center">
+                        <li class="list-inline-item"><i class="devicon-swift-plain"></i></li>
+                        <li class="list-inline-item"><i class="devicon-objectivec-plain"></i></li>
+                        <li class="list-inline-item"><i class="devicon-flutter-plain"></i></li>
+                        <li class="list-inline-item"><i class="devicon-android-plain"></i></li>
+                        <li class="list-inline-item"><i class="devicon-kotlin-plain"></i></li>
+                        <li class="list-inline-item"><i></i></li>
+                        <li class="list-inline-item"><i class="devicon-html5-plain-wordmark"></i></li>
+                        <li class="list-inline-item"><i class="devicon-javascript-plain"></i></li>
+                        <li class="list-inline-item"><i class="devicon-css3-plain-wordmark"></i></li>
+                        <li class="list-inline-item"><i class="devicon-bootstrap-plain"></i></li>
+                        <li class="list-inline-item"><i class="devicon-vuejs-plain"></i></li>
+                        <li class="list-inline-item"><i class="devicon-nodejs-plain"></i></li>
+                        <li class="list-inline-item"><i></i></li>
+                        <li class="list-inline-item"><i class="devicon-github-original"></i></li>
+                        <li class="list-inline-item"><i></i></li>
+                        <li class="list-inline-item"><i class="devicon-visualstudio-plain"></i></li>
+                        <li class="list-inline-item"><i class="devicon-xcode-plain"></i></li>
+                        <li class="list-inline-item"><i class="devicon-androidstudio-plain"></i></li>
+                      </ul>
+                      <div class="subheading mb-3">Workflow</div>
+                      <ul class="fa-ul mb-0">
+                        <li><i class="fa-li fa fa-check"></i>
+                          Responsive Design & UX
+                        </li>
+                        <li><i class="fa-li fa fa-check"></i>
+                          Deadline driven
+                        </li>
+                        <li><i class="fa-li fa fa-check"></i>
+                          Attention to UI details
+                        </li>
+                        <li><i class="fa-li fa fa-check"></i>
+                          Agile Development & Scrum
+                        </li>
+                        <li><i class="fa-li fa fa-check"></i>
+                          Team working
+                        </li>
+                        <li><i class="fa-li fa fa-check"></i>
+                          Design Patterns
+                        </li>
+                      </ul>
+                    </div>
+                  </section>
+                  <section id="interests" class="resume-section p-3 p-lg-5 d-flex flex-column">
+                    <div class="my-auto">
+                      <h2 class="mb-5">Hobbies 😄</h2>
+                      <p>
+                        Apart from being a web developer, I enjoy most of my time listening and playing music. I love
+                        playing piano and singing in my spare time!. 🎹🎵
+                      </p>
+                      <p class="mb-0">
+                        I spend a large amount of my free time exploring the latest technolgy advancements in the
+                        frontend and backend web technology development world and coding in my personal projects!
+                        🙌👨‍💻
+                      </p>
+                    </div>
+                  </section>
+                  <section id="projects" class="resume-section p-3 p-lg-5 d-flex flex-column">
+                    <div class="my-auto">
+                      <h2 class="mb-5">Personal Projects 🦾🧠</h2>
+                      <div class="mb-5">
+                        <div class="card shadow mb-5 bg-white rounded" style="width:80%;text-align:center"><a
+                            href="https://awaisakram.com/nuxtresume/"><img src="/images/resumenuxt.jpg" alt="Kelawar"
+                              class="card-img-top"></a>
+                          <div class="card-body">
+                            <h5 class="card-title">Resume Website</h5>
+                            <p class="card-text">
+                              My personal resume website.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </section>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>window.__NUXT__ = { layout: "default", data: [{}], fetch: [], error: null, serverRendered: !0, routePath: "/", config: {} }</script>
+  <script src="_nuxt/runtime.3b10413.js" defer></script>
+  <script src="_nuxt/pages/index.6909c8c.js" defer></script>
+  <script src="_nuxt/commons.app.874c821.js" defer></script>
+  <script src="_nuxt/vendors.app.b511834.js" defer></script>
+  <script src="_nuxt/app.d2b239d.js" defer></script>
+</body>
+
 </html>
