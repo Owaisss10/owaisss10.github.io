@@ -2,6 +2,8 @@
 
 Author: Awais Akram
 Creation Date: 01.12.2023
+Modification Date: 05.12.2023
+
 --> */
 
 /* Variables */
@@ -10,15 +12,25 @@ const day = 15
 const month = 12
 const year = 1996
 
+var isSnowing = true;
+
 // Document Ready Function 
 document.addEventListener('DOMContentLoaded', function () {
   loadBirthdayTimer();
-  loadConfetti();
+  // loadConfetti();
+  createSnow(30);
 }, false);
 
 // Handles click/tap on the page
-window.addEventListener("click", function (event) {
-  loadConfetti()
+window.addEventListener("click", () => {
+  if (isSnowing) {
+    removeSnow();
+    console.log("Snowing STOPPED!");
+  } else {
+    console.log("Snowing Started");
+    createSnow(30);
+  }
+  // loadConfetti()
 });
 
 /* Functions */
@@ -79,4 +91,46 @@ function loadBirthdayTimer() {
   }
   countDown();
   setInterval(countDown, 1000)
+}
+
+// snow 
+const snowContainer = document.getElementById("snow-container");
+const snowContent = ['&#10052', '&#10053', '&#10054']
+
+const random = (num) => {
+  return Math.floor(Math.random() * num);
+}
+
+const getRandomStyles = () => {
+  const top = random(100);
+  const left = random(100);
+  const dur = random(10) + 10;
+  const size = random(25) + 25;
+  return ` 
+top: -${top}%; 
+left: ${left}%; 
+font-size: ${size}px; 
+animation-duration: ${dur}s; 
+`;
+}
+
+const createSnow = (num) => {
+  isSnowing = true;
+  snowContainer.style.opacity = "1";
+  for (var i = num; i > 0; i--) {
+    var snow = document.createElement("div");
+    snow.className = "snow";
+    snow.style.cssText = getRandomStyles();
+    snow.innerHTML = snowContent[random(2)]
+    snowContainer.append(snow);
+  }
+  snowContainer.hidden = false;
+}
+
+const removeSnow = () => {
+  isSnowing = false;
+  snowContainer.style.opacity = "0";
+  setTimeout(() => {
+    snowContainer.hidden = true;
+  }, 500)
 }
